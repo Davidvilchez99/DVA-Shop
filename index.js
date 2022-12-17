@@ -19,7 +19,7 @@ function inicioVista() {
                 <div class="container">
                     <div id="carousel">
                     <div>
-                    <img src="/concepto/pexels-ksenia-chernaya-3965548.jpg" alt="">
+                    <img src="concepto/pexels-ksenia-chernaya-3965548.jpg" alt="">
                 </div>
                 <div>
                     <img src="concepto/pexels-shattha-pilabut-135620.jpg" alt="">
@@ -64,7 +64,7 @@ function inicioVista() {
                 <section id="siguenos">
                     <div id="div-big-siguenos">
                     <div>
-                        <img src="/concepto/pexels-anastasia-shuraeva-5704410.jpg" alt="img-siguenos">
+                        <img src="concepto/pexels-anastasia-shuraeva-5704410.jpg" alt="img-siguenos">
                     </div>
                         <div>
                             <h2>SÍGUENOS</h2>
@@ -149,7 +149,7 @@ function inicioVista() {
         xhttp.send();
         if (this.readyState != 4 && this.status != 200) {
             $("main").css("background-color", "white");
-            $("main").html('<img id="gif" src="/concepto/progress.gif" alt="">')
+            $("main").html('<img id="gif" src="concepto/progress.gif" alt="">')
         }
     }
 
