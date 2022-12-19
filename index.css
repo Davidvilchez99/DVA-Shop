@@ -98,7 +98,7 @@ main {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  /* grid-template-columns: repeat(8, 1fr); */
   grid-template-rows: repeat(8, min-content);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -567,6 +567,16 @@ footer>div>ul>li:hover {
 
 
 /*carrito cambio main---------------------------------------------------*/
+#container--cesta--productos{
+  grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, min-content);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
 
 #info>select {
   width: 15%;

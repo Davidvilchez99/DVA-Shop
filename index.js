@@ -186,7 +186,7 @@ function inicioVista() {
             <input type="tel" id="tel" pattern="[0-9]{9}" placeholder="Telefono" required>
             <input type="email" id="email-btn" placeholder="Correo" required>
             <input type="text" id="direction" placeholder="Direccion" required>
-            <input type="tel" id="postalCode" placeholder="Código Postal" required>
+            <input type="tel" id="postalCode" pattern="[0-9]{5}" maxlength="5" placeholder="Código Postal" required>
         </div>
         <div id="tarjeta-compra">
             <h2>Tarjeta</h2>
@@ -214,7 +214,7 @@ function inicioVista() {
                 <option value='23'>2023</option>
                 <option value='24'>2024</option>
             </select> 
-            <input type="tel" id="CVV" placeholder="CVV" required>
+            <input type="tel" id="CVV" pattern="[0-9]{3}" maxlength="3" placeholder="CVV" required>
             <input type="submit" id="buy" value="Pagar">
             <div id="div-finalizar-compra">
                 <p id="p-finalizar-compra"></p>
@@ -389,7 +389,7 @@ function inicioVista() {
         }
         else {
             productosCarrito = JSON.parse(localStorage.carrito);
-            let vistaCarrito = `<div id="productos">`;
+            let vistaCarrito = `<div id="container--cesta--productos"><div id="productos">`;
             for (j = 0; j < productosCarrito.length; j++) {
                 vistaCarrito += `<div id="cesta-producto">
             <div><img src="${productosCarrito[j].image}" alt=""></div>
@@ -404,7 +404,7 @@ function inicioVista() {
             <button class="actualizarProducto">Actualizar</button>
             </div>
             <div class="div-actualizar-producto">
-            <label>Cantidad: </label><input type="number" min="0" max="20" class="cantidadProducto" value="${productosCarrito[j].amount}" name="cantidadProducto">
+            <label>Cantidad: </label><input type="number" min="1" max="20" class="cantidadProducto" value="${productosCarrito[j].amount}" name="cantidadProducto">
             <i class="papelera fa fa-trash"></i>
             </div>
         </div>`;
@@ -415,7 +415,7 @@ function inicioVista() {
             <p id="gastosdeEnvio">Gastos de envio: `+ gastosDeEnvio + ` €</p>
             <p id="total">Total: `+ (actualizarCarrito()+gastosDeEnvio).toFixed(2) + ` €</p>
             <button id="tramitarPedido">Tramitar pedido</button>
-        </div>`;
+        </div></div>`;
             $("main").html("");
             $("main").append(vistaCarrito);
             AnañdirEventoClickActualizarProducto();
