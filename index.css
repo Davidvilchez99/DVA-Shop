@@ -1201,12 +1201,9 @@ i {
   }
 
   #page{
-    grid-template-rows: min-content minmax(68vh, min-content) min-content;
+    grid-template-rows: min-content minmax(70%, min-content) min-content;
   }
 
-  main{
-    grid-template-rows: min-content minmax(68vh, min-content) min-content;
-  }
 
   #carousel{
     width: 100vw;
@@ -1237,10 +1234,15 @@ i {
     height: auto;
   }
 
-  #cesta-producto>div:nth-child(2)>h3{
-    font-size: small;
+  #cesta-producto>div:nth-child(2){
+    font-size: xx-small;
   }
-
+  .pPrecio{
+    font-size: xx-small;
+  }
+  .actualizarProducto{
+    font-size: xx-small;
+  }
   header>img{
     width: 40%;
   }
