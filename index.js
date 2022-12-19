@@ -153,7 +153,7 @@ function inicioVista() {
         }
     }
 
-    function AnañdirEventoClickDivProducto(i) {
+    function AnañdirEventoClickDivProducto() {
         $(".div--producto").on("click", function () {
             var index = $(".div--producto").index(this);
             cambiarVistaProducto(index);
@@ -192,7 +192,7 @@ function inicioVista() {
             <h2>Tarjeta</h2>
             <input type="tel" id="targetNumber"  maxlength="19" placeholder="Nº Tarjeta" required>
             <select name='expireMM' id='expireMM'>
-                <option value=''>Més</option>
+                <option value=''>Mes</option>
                 <option value='01'>January</option>
                 <option value='02'>February</option>
                 <option value='03'>March</option>
@@ -262,8 +262,8 @@ function inicioVista() {
 
     function AnañdirEventoEnviarEmailCompra() {
         $("#buy").on("click", () => {
-            subtotal = actualizarCarrito()[0];
-            total = actualizarCarrito()[1];
+            subtotal = actualizarCarrito().toFixed(2);
+            total = (actualizarCarrito()+3).toFixed(2);
             sendEmailBuy($("#email-btn").val(), subtotal, total);
         });
     }
@@ -304,7 +304,7 @@ function inicioVista() {
     function AnañdirEventoClickActualizarProducto() {
         $(".actualizarProducto").on("click", function () {
             var index = $(".actualizarProducto").index(this);
-            carrito[index].amount = $(".cantidadProducto").val();
+            carrito[index].amount = $(".cantidadProducto")[index].value;
             localStorage.carrito = JSON.stringify(carrito);
             cambiarVistaCarrito();
 
@@ -384,7 +384,7 @@ function inicioVista() {
 
     function cambiarVistaCarrito() {
         if (carrito.length == 0) {
-            let vistaCarritoVacio = `<div id="div--carritoVacio"><h1 id="h1carritoVacio">Tu carrito esta vacio</h1></div>`;
+            let vistaCarritoVacio = `<div id="div--carritoVacio"><h1 id="h1carritoVacio">Tu carrito está vacío</h1></div>`;
             $("main").html(vistaCarritoVacio);
         }
         else {
@@ -411,9 +411,9 @@ function inicioVista() {
             }
             vistaCarrito += `</div>
         <div id="cesta">
-            <p id="subtotal">Subtotal: `+ actualizarCarrito()[0] + ` €</p>
+            <p id="subtotal">Subtotal: `+ actualizarCarrito().toFixed(2) + ` €</p>
             <p id="gastosdeEnvio">Gastos de envio: `+ gastosDeEnvio + ` €</p>
-            <p id="total">Total: `+ actualizarCarrito()[1] + ` €</p>
+            <p id="total">Total: `+ (actualizarCarrito()+gastosDeEnvio).toFixed(2) + ` €</p>
             <button id="tramitarPedido">Tramitar pedido</button>
         </div>`;
             $("main").html("");
@@ -426,13 +426,10 @@ function inicioVista() {
 
     function actualizarCarrito() {
         Subtotal = 0;
-        pedido = [];
         for (j = 0; j < productosCarrito.length; j++) {
             Subtotal += (productosCarrito[j].price * productosCarrito[j].amount);
-            pedido.push(Subtotal.toFixed(2), (Subtotal + gastosDeEnvio).toFixed(2));
-
         }
-        return pedido;
+        return Subtotal;
     }
 
     function cambiarVistaProducto(index) {
