@@ -1009,10 +1009,12 @@ i {
 /*media querys---------------------------------------------------*/
 
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
+
   .div-actualizar-producto .fa-trash {
     font-size: 2rem;
     margin-left: 2%;
   }
+
 }
 
 @media screen and (min-width: 825px) and (max-width: 1200px) {
@@ -1023,9 +1025,11 @@ i {
   .div--producto {
     font-size: small;
   }
+
 }
 
 @media screen and (min-width: 711px) and (max-width: 824px) {
+
   header {
     grid-template-rows: repeat(2, 3fr);
 
@@ -1075,43 +1079,54 @@ i {
   #registro{
     font-size: medium;
   }
+
   #registrarse{
     font-size: medium;
   }
 }
 
 @media screen and (max-width: 711px) {
+
   #div--i>i{
     font-size: x-large;
   }
+
   #nav>ul{
     font-size: medium;
   }
+
   header {
     grid-template-rows: repeat(2, 3fr);
 
   }
+
   .div--container{
     margin: 7%;
   }
+
   #imagenes>img{
     width: 80%;
   }
+
   #div--i {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     justify-self: center;
     width: 20%;
   }
+
   #eslogan>div{
     font-size: small;
   }
+
   #siguenos>div>div:nth-child(2){
     font-size: small;
   }
+
   footer>div{
     font-size: small;
   }
+
   #info>select{
     width: auto;
     font-size: small;
@@ -1133,7 +1148,6 @@ i {
   .pPrecio{
     font-size: medium;
   }
-
 
   .div--producto {
     font-size: 0.5em;
@@ -1164,6 +1178,7 @@ i {
   #email>div>form>h2{
     font-size: x-large;
   }
+
   #email>div>form>p{
     font-size: medium;
   }
@@ -1171,12 +1186,15 @@ i {
   #email>div>form>input[type="text"]{
     font-size: small;
   }
+
   #email>div>form>input[type="submit"]{
     font-size: small;
   }
+
   .ordenarProductos{
     width:auto;
   }
+
   #select{
     width: auto;
     font-size: small;
@@ -1185,37 +1203,44 @@ i {
   #page{
     grid-template-rows: min-content minmax(68vh, min-content) min-content;
   }
+
   main{
     grid-template-rows: min-content minmax(68vh, min-content) min-content;
   }
-  /* #hero {
-    display: none;
-  } */
+
   #carousel{
     width: 100vw;
   }
+
   .container{
     perspective: 800px;
   }
+
   #registro{
     font-size: small;
   }
+
   #registrarse{
     font-size: small;
   }
+
   #cesta{
     font-size: small;
   }
+
   .div-actualizar-producto>label{
     font-size: small;
   }
+
   .cantidadProducto{
     width: auto;
     height: auto;
   }
+
   #cesta-producto>div:nth-child(2)>h3{
     font-size: small;
   }
+
   header>img{
     width: 40%;
   }
@@ -1223,6 +1248,7 @@ i {
   #datos-compra{
     font-size: large;
   }
+
   #tarjeta-compra{
     font-size: large;
   }
@@ -1230,5 +1256,4 @@ i {
   #eslogan>div>div:first-child{
     font-size: medium;
   }
-
 }
