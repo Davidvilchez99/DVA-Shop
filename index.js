@@ -232,6 +232,18 @@ function inicioVista() {
             sendEmailRegister($("#userName").val(), $("#name").val(), $("#surname").val(), $("#password").val(), $("#tel").val(), $("#email-btn").val());
         });
     }
+    function AnañdirEventoDisabledLogin() {
+        $("#registro").on("click", () => {
+            $("#registro").css("opacity","1");
+            $("#registrarse").css("opacity","0.5");
+        });
+    }
+    function AnañdirEventoDisabledRegister() {
+        $("#registrarse").on("click", () => {
+            $("#registrarse").css("opacity","1");
+            $("#registro").css("opacity","0.5");
+        });
+    }
 
     function sendEmailRegister(username, name, surname, password, tel, email) {
         emailjs.send("service_9l2m11s", "template_3snb592", {
@@ -380,6 +392,8 @@ function inicioVista() {
         $("main").html("");
         $("main").append(vistaUsuario);
         AnañdirEventoEnviarEmailRegistro();
+        AnañdirEventoDisabledLogin();
+        AnañdirEventoDisabledRegister();
     }
 
     function cambiarVistaCarrito() {
