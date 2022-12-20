@@ -1334,4 +1334,34 @@ i {
   #cesta-producto>div>img {
     width: 50%;
   }
+
+
+  #container--compra{
+    grid-template-columns: repeat(1, 2fr);
+  }
+  #datos-compra{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  #tarjeta-compra {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  #user--div{
+    grid-template-columns: repeat(1, 2fr);
+  }
+  #registro{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  #registrarse {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+  #registro--div--respuesta{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    font-size: 0.5em;
+  }
 }

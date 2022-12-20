@@ -468,7 +468,7 @@ function inicioVista() {
                 <option value="XL">XL</option>
             </select>`;
         }        
-        vistaProducto += `<br><label>Cantidad: </label><input type="number" min="0" max="20" value="1" id="cantidad-producto"><br><button class="addtocart">
+        vistaProducto += `<br><label>Cantidad: </label><input type="number" min="1" max="20"value="1" id="cantidad-producto"><br><button class="addtocart">
         <div class="pretext">
           <i class="fa fa-cart-plus"></i> ADD TO CART
         </div>
