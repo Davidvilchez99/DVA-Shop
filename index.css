@@ -429,7 +429,7 @@ footer>div>ul>li:hover {
 
 .div--container {
   grid-column: 1 / -1;
-  grid-row: 1 / 8;
+  /* grid-row: 1 / 8; */
   grid-template-columns: repeat(3, 1fr);
   display: grid;
   align-items: center;
@@ -1013,7 +1013,7 @@ i {
   width: 50vw;
   height: 50vh;
   position: relative;
-  left: calc(50% - 1vh);
+  left: calc(50% - 26vw);
 }
 
 /*media querys---------------------------------------------------*/
@@ -1198,7 +1198,7 @@ i {
   }
 
   #email>div>form>input[type="submit"]{
-    font-size: small;
+    font-size: x-small;
   }
 
   .ordenarProductos{
@@ -1254,7 +1254,7 @@ i {
     font-size: xx-small;
   }
   header>img{
-    width: 40%;
+    width: 80%;
   }
 
   #datos-compra{
@@ -1267,5 +1267,12 @@ i {
 
   #eslogan>div>div:first-child{
     font-size: medium;
+  }
+  .div--container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+  }
+  #carousel>div{
+    top: 30px;
   }
 }
